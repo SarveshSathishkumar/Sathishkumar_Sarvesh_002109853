@@ -21,7 +21,7 @@ public class Volunteer {
     UserAccount ua;
     Date date;
     HashMap<Date,Map<Date,Boolean>> volunteerAvailability ;
-    HashMap<Team,HashMap<Date,List<Date>>> teamMapping;
+    HashMap<Company,HashMap<Date,List<Date>>> companyMapping;
 
     public HashMap<Date, Map<Date, Boolean>> getvolunteerAvailability() {
         return volunteerAvailability;
@@ -68,12 +68,12 @@ public class Volunteer {
     }
     int volunteerId;
 
-    public HashMap<Team, HashMap<Date, List<Date>>> getTeamMapping() {
+    public HashMap<Company, HashMap<Date, List<Date>>> getCompanyMapping() {
         return teamMapping;
     }
 
-    public void setTeamMapping(HashMap<Team, HashMap<Date, List<Date>>> teamMapping) {
-        this.teamMapping = teamMapping;
+    public void setCompanyMapping(HashMap<Team, HashMap<Date, List<Date>>> companyMapping) {
+        this.companyMapping = companyMapping;
     }
 
     public int getVolunteerId() {
@@ -91,8 +91,8 @@ public class Volunteer {
         this.ua = ua;
         if(volunteerAvailability == null)
            volunteerAvailability = new  HashMap<Date,Map<Date,Boolean>> ();
-        if(teamMapping == null)
-            teamMapping = new HashMap<Team,HashMap<Date,List<Date>>>();
+        if(companyMapping == null)
+            companyMapping = new HashMap<Company,HashMap<Date,List<Date>>>();
                 
         //doctorAvailability.put(new Date(), this.timeMap());
     }
